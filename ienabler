@@ -1,0 +1,13 @@
+#!/usr/bin/env expect
+
+set timeout 20
+set url "ienabler"
+set port "259"
+set user "mrr54"
+
+spawn telnet $url $port
+expect "User: "
+send $user
+send "\r"
+expect "password: "
+interact
